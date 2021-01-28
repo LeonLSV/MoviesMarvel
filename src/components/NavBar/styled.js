@@ -7,7 +7,7 @@ export const FondoFotoHeader = styled.img`
 `;
 
 export const TextNavbar = styled.button`
-  color: white;
+  color: ${(props) => props.color};
   font-weight: 400;
   margin: 0 14px;
   font-size: 16px;
@@ -28,5 +28,13 @@ export const Logo = styled.img`
   }
   @media (max-width: 414px) {
     width: 40%;
+  }
+`;
+
+export const HideContainer = styled.div`
+  display: ${(props) => props.display};
+  width: 100%;
+  @media (max-width: 991px) {
+    display: ${(props) => props.display991};
   }
 `;

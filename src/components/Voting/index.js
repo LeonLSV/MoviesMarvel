@@ -21,12 +21,46 @@ import {
 } from "./styled";
 
 function Voting() {
-  const [percent, updatePercent] = useState(50);
-  const [percentInv, updatePercentInv] = useState(50);
+  // const storagePercent = localStorage.getItem("percent");
+
+  // const ValidatePercent = storagePercent
+  //   ? storagePercent
+  //   : localStorage.setItem("percent", 50);
+
+  // const [percent, updatePercent] = useState(ValidatePercent);
+  // const increase = percent < 100 ? percent + 1 : 100;
+  // const decrease = percent > 0 || percent < 100 ? percernt - 1 : percent;
+
+  const [percent, updatePercent] = useState(
+    window.localStorage.getItem("percent")
+  );
+  const [percentInv, updatePercentInv] = useState(100);
   const [voted, updateVoted] = useState(false);
   const [like, updateLike] = useState(true);
 
+  const setLocalStorage = (value) => {
+    try {
+      updatePercent(value);
+      window.localStorage.setItem("percent", JSON.stringify(value));
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  // const Suma = () => {
+  //   if (percent > 0 || percent < 100) {
+  //     updatePercent(parseInt(percent) + 1);
+  //   }
+  // };
+
+  // const Resta = () => {
+  //   if (percent > 0 || percent < 100) {
+  //     updatePercent(parseInt(percent) - 1);
+  //   }
+  // };
+
   //Me gusta
+
   const increase = () => {
     let porcentaje = percent + 1;
     let porcentajeInv = percentInv - 1;
@@ -37,18 +71,20 @@ function Voting() {
     updatePercentInv(porcentajeInv);
     updateVoted(true);
     updateLike(true);
+    setLocalStorage(porcentaje);
   };
   //No me gusta
   const decline = () => {
     let porcentaje = percent - 1;
     let porcentajeInv = percentInv + 1;
-    if (porcentaje < 0) {
-      porcentaje = 0;
+    if (porcentajeInv <= 0) {
+      porcentajeInv = 0;
     }
     updatePercent(porcentaje);
     updatePercentInv(porcentajeInv);
     updateVoted(true);
     updateLike(false);
+    setLocalStorage(porcentaje);
   };
   //Votar de nuevo
   const restart = () => {

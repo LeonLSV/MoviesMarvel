@@ -1,11 +1,10 @@
-import React from "react";
-import { FondoFotoHeader, TextNavbar, Logo } from "./styled";
+import React, { useState } from "react";
+import { FondoFotoHeader, TextNavbar, Logo, HideContainer } from "./styled";
 import header from "../../images/header.png";
 import logo from "../../images/logo.png";
-import { SearchOutlined } from "@ant-design/icons";
-import { Row, Col } from "antd";
+import { SearchOutlined, MenuOutlined } from "@ant-design/icons";
+import { Row, Col, Drawer, Button } from "antd";
 import Voting from "../Voting";
-import "./index.css";
 
 const AlineacionNavBar = {
   displa: "flex",
@@ -14,30 +13,74 @@ const AlineacionNavBar = {
 };
 
 export const NavBar = () => {
+  //Menú
+  const [visible, setVisible] = useState(false);
+  const showDrawer = () => {
+    setVisible(true);
+  };
+  const onClose = () => {
+    setVisible(false);
+  };
+
   return (
     <>
       <FondoFotoHeader src={header} alt="Fondo header" />
-      <Row style={AlineacionNavBar}>
-        <Col lg={2} xs={0}></Col>
-        <Col lg={10} xs={24} className="logo">
-          <Logo src={logo} alt="Logo Heroes" />
-        </Col>
-        <Col
-          lg={12}
-          style={{
-            display: "flex",
-            justifyContent: "flex-start",
-            alignItems: "center",
-            marginTop: "30px",
-          }}>
-          <TextNavbar>Heroes Anteriores</TextNavbar>
-          <TextNavbar>¿Cómo funciona?</TextNavbar>
-          <TextNavbar>Iniciar Sesión</TextNavbar>
-          <SearchOutlined
-            style={{ color: "white", fontSize: "20px", marginLeft: "20px" }}
-          />
-        </Col>
-      </Row>
+      <HideContainer display="none" display991="flex">
+        <Row style={AlineacionNavBar}>
+          <Col lg={2} xs={0}></Col>
+          <Col lg={10} xs={24} style={{ marginTop: "30px" }}>
+            <Logo src={logo} alt="Logo Heroes" />
+          </Col>
+          <Col
+            lg={12}
+            style={{
+              display: "flex",
+              justifyContent: "space-around",
+              alignItems: "center",
+              marginTop: "30px",
+            }}>
+            <Button
+              type="primary"
+              style={{ background: "#1cbbb4", border: "#1cbbb4" }}
+              onClick={showDrawer}>
+              <MenuOutlined />
+            </Button>
+            <Drawer
+              title="Menú"
+              placement="right"
+              closable={false}
+              onClose={onClose}
+              visible={visible}>
+              <TextNavbar color="black">Heroes Anteriores</TextNavbar>
+              <TextNavbar color="black">¿Cómo funciona?</TextNavbar>
+              <TextNavbar color="black">Iniciar Sesión</TextNavbar>
+              <SearchOutlined style={{ color: "white", fontSize: "20px" }} />
+            </Drawer>
+          </Col>
+        </Row>
+      </HideContainer>
+      <HideContainer display="flex" display991="none">
+        <Row style={AlineacionNavBar}>
+          <Col lg={2} xs={0}></Col>
+          <Col lg={10} xs={24} style={{ marginTop: "30px" }}>
+            <Logo src={logo} alt="Logo Heroes" />
+          </Col>
+          <Col
+            lg={10}
+            style={{
+              display: "flex",
+              justifyContent: "space-around",
+              alignItems: "center",
+              marginTop: "30px",
+            }}>
+            <TextNavbar>Heroes Anteriores</TextNavbar>
+            <TextNavbar>¿Cómo funciona?</TextNavbar>
+            <TextNavbar>Iniciar Sesión</TextNavbar>
+            <SearchOutlined style={{ color: "white", fontSize: "20px" }} />
+          </Col>
+          <Col lg={2} xs={0}></Col>
+        </Row>
+      </HideContainer>
       <Row>
         <Col lg={2} xs={0}></Col>
         <Col xl={10} lg={10} xs={24}>

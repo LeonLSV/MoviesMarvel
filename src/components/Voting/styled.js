@@ -77,6 +77,7 @@ export const TextPercent = styled.p`
   text-align: right;
   font-size: 20px;
   margin: 5px 5px;
+  width: auto;
 `;
 export const TextPercentInv = styled.p`
   text-align: left;
