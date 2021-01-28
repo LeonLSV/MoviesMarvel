@@ -1,0 +1,65 @@
+.CardImage {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-top: 40px;
+  min-width: 300px;
+  max-width: 492px;
+  height: 550px;
+  background-image: url("https://leonsonidovirtual.com/wp-content/uploads/2021/01/superman.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.CardImageThor {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-top: 40px;
+  min-width: 300px;
+  max-width: 492px;
+  height: 550px;
+  background-image: url("https://leonsonidovirtual.com/wp-content/uploads/2021/01/tor.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.CardImageBatman {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-top: 40px;
+  min-width: 300px;
+  max-width: 492px;
+  height: 550px;
+  background-image: url("https://leonsonidovirtual.com/wp-content/uploads/2021/01/batman.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.CardImageSpiderman {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-top: 40px;
+  min-width: 300px;
+  max-width: 492px;
+  height: 550px;
+  background-image: url("https://leonsonidovirtual.com/wp-content/uploads/2021/01/spiderman.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+@media (max-width: 768px) {
+  .RowCardTitle {
+    display: flex;
+    justify-content: center;
+
+    text-align: center;
+  }
+}

@@ -1,0 +1,9 @@
+.Row-MidSection {
+  margin-top: 160px;
+}
+
+@media (min-width: 1500px) {
+  .Row-MidSection {
+    margin-top: 300px;
+  }
+}
