@@ -118,6 +118,9 @@ export const ButtonLike = styled.button`
 export const ButtonVolverVotar = styled.button`
   background: transparent;
   cursor: pointer;
-  margin: 0 auto;
+  margin: 30px 0;
+  margin-bottom: 25px;
   border: 1px solid white;
+  height: 50px;
+  padding: 0 30px;
 `;

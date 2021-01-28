@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import votingTable from "../../images/VotingTable.png";
-import { Row, Col, Tooltip, Button, Modal } from "antd";
+import { Row, Col, Tooltip } from "antd";
 import { LikeOutlined, DislikeOutlined } from "@ant-design/icons";
 import {
   VotingTableBackground,
@@ -28,8 +28,8 @@ function Voting() {
 
   //Me gusta
   const increase = () => {
-    let porcentaje = percent + 10;
-    let porcentajeInv = percentInv - 10;
+    let porcentaje = percent + 1;
+    let porcentajeInv = percentInv - 1;
     if (porcentaje > 100) {
       porcentaje = 100;
     }
@@ -40,8 +40,8 @@ function Voting() {
   };
   //No me gusta
   const decline = () => {
-    let porcentaje = percent - 10;
-    let porcentajeInv = percentInv + 10;
+    let porcentaje = percent - 1;
+    let porcentajeInv = percentInv + 1;
     if (porcentaje < 0) {
       porcentaje = 0;
     }
