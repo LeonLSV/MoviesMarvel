@@ -7,8 +7,8 @@ export const Footer = () => {
   return (
     <>
       <Row align="middle">
-        <Col md={2} xs={0}></Col>
-        <Col md={10} xs={24}>
+        <Col md={2} sm={2} xs={0}></Col>
+        <Col md={10} sm={10} xs={24}>
           <ContainerLeft>
             <TextFooter>Términos y condiciones</TextFooter>
             <TextFooter>Politica de tratamiento de datos</TextFooter>
@@ -18,6 +18,7 @@ export const Footer = () => {
 
         <Col
           md={10}
+          sm={10}
           xs={24}
           styled={{
             display: "flex",
@@ -28,7 +29,7 @@ export const Footer = () => {
             <TextFooter>Siguenos</TextFooter>
             <FacebookFilled
               style={{
-                marginRight: "20px",
+                marginRight: "10px",
                 fontSize: "25px",
                 color: "#333333",
               }}
