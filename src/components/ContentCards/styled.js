@@ -7,6 +7,10 @@ export const ImageMid = styled.img`
 export const TitleSuperHeroes = styled.h1`
   margin-top: 50px;
   font-size: 50px;
+  @media (max-width: 540px) {
+    font-size: 40px;
+    line-height: 40px;
+  }
 `;
 
 export const TextTitle = styled.h1`

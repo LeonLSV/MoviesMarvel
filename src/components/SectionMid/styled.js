@@ -10,4 +10,7 @@ export const TextTitle = styled.h1`
   font-weight: ${(props) => props.weight};
   margin: 0;
   margin-top: ${(props) => props.margintop};
+  @media (max-width: 1073px) {
+    font-size: 23px;
+  }
 `;

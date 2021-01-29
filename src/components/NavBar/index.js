@@ -25,17 +25,21 @@ export const NavBar = () => {
   return (
     <>
       <FondoFotoHeader src={header} alt="Fondo header" />
-      <HideContainer display="none" display991="flex">
-        <Row style={AlineacionNavBar}>
-          <Col lg={2} xs={0}></Col>
-          <Col lg={10} xs={24} style={{ marginTop: "30px" }}>
+      <HideContainer display="none" display991="inline">
+        <Row
+          style={{
+            displa: "flex",
+            justifyContent: "space-around",
+            alignItems: "center",
+          }}>
+          <Col lg={12} style={{ marginTop: "30px" }}>
             <Logo src={logo} alt="Logo Heroes" />
           </Col>
           <Col
             lg={12}
             style={{
               display: "flex",
-              justifyContent: "space-around",
+              justifyContent: "flex-end",
               alignItems: "center",
               marginTop: "30px",
             }}>
@@ -54,12 +58,19 @@ export const NavBar = () => {
               <TextNavbar color="black">Heroes Anteriores</TextNavbar>
               <TextNavbar color="black">¿Cómo funciona?</TextNavbar>
               <TextNavbar color="black">Iniciar Sesión</TextNavbar>
-              <SearchOutlined style={{ color: "white", fontSize: "20px" }} />
+              <br />
+              <SearchOutlined
+                style={{
+                  color: "black",
+                  fontSize: "20px",
+                  marginLeft: "15px",
+                }}
+              />
             </Drawer>
           </Col>
         </Row>
       </HideContainer>
-      <HideContainer display="flex" display991="none">
+      <HideContainer display="inline" display991="none">
         <Row style={AlineacionNavBar}>
           <Col lg={2} xs={0}></Col>
           <Col lg={10} xs={24} style={{ marginTop: "30px" }}>

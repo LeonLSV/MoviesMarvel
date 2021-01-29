@@ -4,6 +4,11 @@
 
 @media (min-width: 1500px) {
   .Row-MidSection {
-    margin-top: 300px;
+    margin-top: 330px;
+  }
+}
+@media (max-width: 1025px) {
+  .Row-MidSection {
+    margin-top: 50px;
   }
 }

@@ -6,7 +6,7 @@ import {
   VotingTableBackground,
   TextOpinion,
   ContainerText,
-  TextIroman,
+  TextTitleCard,
   TextReseña,
   TextMasInfo,
   TextVotar,
@@ -18,19 +18,10 @@ import {
   TextVotoRegistrado,
   TextPercentInv,
   ButtonVolverVotar,
+  Boton,
 } from "./styled";
 
 function Voting() {
-  // const storagePercent = localStorage.getItem("percent");
-
-  // const ValidatePercent = storagePercent
-  //   ? storagePercent
-  //   : localStorage.setItem("percent", 50);
-
-  // const [percent, updatePercent] = useState(ValidatePercent);
-  // const increase = percent < 100 ? percent + 1 : 100;
-  // const decrease = percent > 0 || percent < 100 ? percernt - 1 : percent;
-
   const [percent, updatePercent] = useState(
     window.localStorage.getItem("percent")
   );
@@ -47,23 +38,11 @@ function Voting() {
     }
   };
 
-  // const Suma = () => {
-  //   if (percent > 0 || percent < 100) {
-  //     updatePercent(parseInt(percent) + 1);
-  //   }
-  // };
-
-  // const Resta = () => {
-  //   if (percent > 0 || percent < 100) {
-  //     updatePercent(parseInt(percent) - 1);
-  //   }
-  // };
-
   //Me gusta
 
   const increase = () => {
-    let porcentaje = percent + 1;
-    let porcentajeInv = percentInv - 1;
+    let porcentaje = percent + 10;
+    let porcentajeInv = percentInv - 10;
     if (porcentaje > 100) {
       porcentaje = 100;
     }
@@ -75,8 +54,8 @@ function Voting() {
   };
   //No me gusta
   const decline = () => {
-    let porcentaje = percent - 1;
-    let porcentajeInv = percentInv + 1;
+    let porcentaje = percent - 10;
+    let porcentajeInv = percentInv + 10;
     if (porcentajeInv <= 0) {
       porcentajeInv = 0;
     }
@@ -111,7 +90,7 @@ function Voting() {
             <>
               <ContainerText>
                 <TextOpinion>Dinos tu opinión sobre</TextOpinion>
-                <TextIroman>Ironman?</TextIroman>
+                <TextTitleCard>Ironman?</TextTitleCard>
                 <TextReseña>
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry. Lorem Ipsum has been the industry's
@@ -129,14 +108,10 @@ function Voting() {
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
-                    background: "#1cbbb4",
-                    fontSize: "60px",
-                    height: "100px",
-                    width: "100px",
                     cursor: "pointer",
                   }}>
                   <Tooltip title="Me gusta">
-                    <ButtonLike onClick={increase}>
+                    <ButtonLike backgroun="#1cbbb4" onClick={increase}>
                       <LikeOutlined />
                     </ButtonLike>
                   </Tooltip>
@@ -147,14 +122,10 @@ function Voting() {
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
-                    background: "#ffad1d",
-                    fontSize: "60px",
-                    height: "100px",
-                    width: "100px",
                     cursor: "pointer",
                   }}>
                   <Tooltip title="No me gusta">
-                    <ButtonLike onClick={decline}>
+                    <ButtonLike backgroun="#ffad1d" onClick={decline}>
                       <DislikeOutlined />
                     </ButtonLike>
                   </Tooltip>
@@ -164,33 +135,20 @@ function Voting() {
           ) : (
             <>
               <ContainerText>
-                <TextIroman>Marvel - Ironman</TextIroman>
+                <TextTitleCard>
+                  Marvel - <span>Ironman</span>
+                </TextTitleCard>
                 <ContainerLike>
                   {like ? (
-                    <LikeOutlined
-                      style={{
-                        height: "130px",
-                        width: "130px",
-                        textAlign: "center",
-                        fontSize: "60px",
-                        padding: "30px",
-                        background: "#1cbbb4",
-                      }}
-                    />
+                    <Boton back="#1cbbb4">
+                      <LikeOutlined />
+                    </Boton>
                   ) : (
-                    <DislikeOutlined
-                      style={{
-                        height: "130px",
-                        width: "130px",
-                        textAlign: "center",
-                        fontSize: "60px",
-                        padding: "30px",
-                        background: "#ffad1d",
-                      }}
-                    />
+                    <Boton back="#ffad1d">
+                      <DislikeOutlined />
+                    </Boton>
                   )}
-                  {/* <Liked  /> */}
-                  {/* <img src={megusta} alt="me gusta" /> */}
+
                   <TextVotoRegistrado>
                     Tu voto
                     <br /> ha sido registrado

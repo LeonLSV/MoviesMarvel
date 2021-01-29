@@ -16,20 +16,22 @@ export const SectionMid = () => {
             alignItems: "center",
             background: "#ebebeb",
           }}>
-          <Col lg={6}>
-            <TextTitle size="25px">Lorem ipsum. Dolor</TextTitle>
-            <TextTitle size="37px" weight="bold" margintop="-10px">
-              IP Lorem ip.
-            </TextTitle>
-          </Col>
-          <Col lg={16}>
-            <TextoDescription>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed
-              fringilla nisi. Suspendisse vel nulla non ipsum volutpat fermentum
-              et a velit. Nullam nunc massa, ultricies sed purus viverra, congue
-              tristique diam.
-            </TextoDescription>
-          </Col>
+          <Row>
+            <Col lg={6} offset={1}>
+              <TextTitle size="25px">Lorem ipsum. Dolor</TextTitle>
+              <TextTitle size="37px" weight="bold" margintop="-10px">
+                IP Lorem ip.
+              </TextTitle>
+            </Col>
+            <Col lg={15} offset={1}>
+              <TextoDescription>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed
+                fringilla nisi. Suspendisse vel nulla non ipsum volutpat
+                fermentum et a velit. Nullam nunc massa, ultricies sed purus
+                viverra, congue tristique diam.
+              </TextoDescription>
+            </Col>
+          </Row>
         </Col>
       </Row>
     </>

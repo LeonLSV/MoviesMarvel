@@ -23,11 +23,8 @@ export const TextNavbar = styled.button`
 
 export const Logo = styled.img`
   width: 40%;
-  @media (max-width: 991px) {
-    width: 20%;
-  }
-  @media (max-width: 414px) {
-    width: 40%;
+  @media (max-width: 769px) {
+    width: 60%;
   }
 `;
 

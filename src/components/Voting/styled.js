@@ -5,7 +5,7 @@ export const VotingTableBackground = styled.img`
   height: 100%;
   position: absolute;
   z-index: -1;
-  @media (max-width: 768px) {
+  @media (max-width: 1025px) {
     background: black;
   }
 `;
@@ -19,18 +19,19 @@ export const TextOpinion = styled.p`
   color: white;
   margin-bottom: 0;
   font-weight: 300;
-  @media (max-width: 414px) {
+  @media (max-width: 1025px) {
     font-size: 13px;
   }
 `;
 
-export const TextIroman = styled.h1`
+export const TextTitleCard = styled.h1`
   font-size: 60px;
   color: white;
   margin-top: -10px;
   margin-bottom: 10px;
-  @media (max-width: 414px) {
-    font-size: 40px;
+  @media (max-width: 1025px) {
+    font-size: 34px;
+    line-height: 40px;
   }
 `;
 
@@ -38,8 +39,8 @@ export const TextReseña = styled.p`
   color: white;
   font-size: 21px;
   font-weight: 300;
-  @media (max-width: 414px) {
-    font-size: 15px;
+  @media (max-width: 1025px) {
+    font-size: 14px;
   }
 `;
 
@@ -48,7 +49,7 @@ export const TextMasInfo = styled.p`
   font-size: 14px;
   font-weight: 300;
   text-decoration: underline;
-  @media (max-width: 414px) {
+  @media (max-width: 1025px) {
     font-size: 13px;
   }
 `;
@@ -57,7 +58,7 @@ export const TextVotar = styled.p`
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 0;
-  @media (max-width: 414px) {
+  @media (max-width: 1025px) {
     font-size: 16px;
   }
 `;
@@ -106,6 +107,22 @@ export const TextVotoRegistrado = styled.h2`
   margin-left: 20px;
   font-weight: bold;
   line-height: 40px;
+  @media (max-width: 1025px) {
+    font-size: 25px;
+    line-height: 25px;
+  }
+  @media (max-width: 415px) {
+    font-size: 25px;
+    line-height: 25px;
+  }
+`;
+
+export const Boton = styled.button`
+  background: ${(props) => props.back};
+  width: 100px;
+  text-align: center;
+  font-size: 50px;
+  border: none;
 `;
 
 export const ButtonLike = styled.button`
@@ -114,6 +131,14 @@ export const ButtonLike = styled.button`
   border: none;
   cursor: pointer;
   width: 100%;
+  font-size: 60px;
+  background: ${(props) => props.backgroun};
+  @media (max-width: 1025px) {
+    font-size: 50px;
+  }
+  @media (max-width: 768px) {
+    font-size: 40px;
+  }
 `;
 
 export const ButtonVolverVotar = styled.button`
@@ -124,4 +149,13 @@ export const ButtonVolverVotar = styled.button`
   border: 1px solid white;
   height: 50px;
   padding: 0 30px;
+  @media (max-width: 768px) {
+    margin-bottom: -9px;
+  }
+  @media (max-width: 415px) {
+    margin-bottom: 9px;
+  }
+  @media (max-width: 375px) {
+    margin-bottom: 5px;
+  }
 `;
