@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { fadeIn } from "../../StylesGlobal/animation";
 
 export const ImageMid = styled.img`
   width: 100%;
@@ -30,6 +31,7 @@ export const ButtonDetails = styled.button`
 `;
 
 export const ContainerButton = styled.div`
+  ${fadeIn({ time: "3s" })}
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -37,14 +39,16 @@ export const ContainerButton = styled.div`
 `;
 
 export const DescriptionCard = styled.p`
+  ${fadeIn({ time: "3s" })}
   padding: 0 50px;
 `;
 
 export const ImageLikeCard = styled.img`
-  width: 30px;
+  width: 36px;
 `;
 
 export const ContainerTitle = styled.div`
+  ${fadeIn({ time: "3s" })}
   display: flex;
   align-items: center;
 `;
@@ -56,6 +60,7 @@ export const TextTimeCard = styled.p`
 `;
 
 export const ImgVoting = styled.img`
+  ${fadeIn({ time: "3s" })}
   width: 100%;
   margin-top: 30px;
 `;

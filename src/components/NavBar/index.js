@@ -63,7 +63,8 @@ export const NavBar = () => {
                 style={{
                   color: "black",
                   fontSize: "20px",
-                  marginLeft: "15px",
+                  marginLeft: "17px",
+                  cursor: "pointer",
                 }}
               />
             </Drawer>
@@ -87,7 +88,9 @@ export const NavBar = () => {
             <TextNavbar>Heroes Anteriores</TextNavbar>
             <TextNavbar>¿Cómo funciona?</TextNavbar>
             <TextNavbar>Iniciar Sesión</TextNavbar>
-            <SearchOutlined style={{ color: "white", fontSize: "20px" }} />
+            <SearchOutlined
+              style={{ cursor: "pointer", color: "white", fontSize: "20px" }}
+            />
           </Col>
           <Col lg={2} xs={0}></Col>
         </Row>

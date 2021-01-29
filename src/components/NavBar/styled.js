@@ -19,6 +19,9 @@ export const TextNavbar = styled.button`
     font-size: 13px;
     margin: 0 8px;
   }
+  &:hover {
+    transform: scale(1.1);
+  }
 `;
 
 export const Logo = styled.img`

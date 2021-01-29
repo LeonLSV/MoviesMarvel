@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import votingTable from "../../images/VotingTable.png";
+import wiki from "../../images/Wiki.png";
 import { Row, Col, Tooltip } from "antd";
 import { LikeOutlined, DislikeOutlined } from "@ant-design/icons";
 import {
@@ -18,7 +19,9 @@ import {
   TextVotoRegistrado,
   TextPercentInv,
   ButtonVolverVotar,
-  Boton,
+  BackgroundBoton,
+  ContainerMasInfo,
+  ImageWiki,
 } from "./styled";
 
 function Voting() {
@@ -71,10 +74,6 @@ function Voting() {
     updateLike(true);
   };
 
-  console.log("like=", like);
-  console.log("voted=", voted);
-  console.log("percent=", percent);
-
   return (
     <>
       <Row
@@ -98,7 +97,12 @@ function Voting() {
                   printer took a galley of type and scrambled it to make a type
                   specimen book.
                 </TextReseña>
-                <TextMasInfo>Más información</TextMasInfo>
+                <ContainerMasInfo>
+                  <ImageWiki src={wiki} alt="wikipedia" />
+                  <Tooltip title="Más información">
+                    <TextMasInfo>Más información</TextMasInfo>
+                  </Tooltip>
+                </ContainerMasInfo>
                 <TextVotar>¿Cuál es tu voto?</TextVotar>
               </ContainerText>
               <Row justify="center" align="bottom">
@@ -140,13 +144,13 @@ function Voting() {
                 </TextTitleCard>
                 <ContainerLike>
                   {like ? (
-                    <Boton back="#1cbbb4">
+                    <BackgroundBoton back="#1cbbb4">
                       <LikeOutlined />
-                    </Boton>
+                    </BackgroundBoton>
                   ) : (
-                    <Boton back="#ffad1d">
+                    <BackgroundBoton back="#ffad1d">
                       <DislikeOutlined />
-                    </Boton>
+                    </BackgroundBoton>
                   )}
 
                   <TextVotoRegistrado>

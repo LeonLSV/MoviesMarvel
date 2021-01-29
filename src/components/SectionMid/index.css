@@ -2,9 +2,19 @@
   margin-top: 160px;
 }
 
-@media (min-width: 1500px) {
+@media (max-width: 2000px) {
   .Row-MidSection {
-    margin-top: 330px;
+    margin-top: 390px;
+  }
+}
+@media (max-width: 1600px) {
+  .Row-MidSection {
+    margin-top: 150px;
+  }
+}
+@media (max-width: 1400px) {
+  .Row-MidSection {
+    margin-top: 160px;
   }
 }
 @media (max-width: 1025px) {
