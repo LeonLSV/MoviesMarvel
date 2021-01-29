@@ -64,3 +64,11 @@ export const ImgVoting = styled.img`
   width: 100%;
   margin-top: 30px;
 `;
+
+export const ImageFondo = styled.img`
+  ${fadeIn({ time: "3s" })}
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 550px;
+`;

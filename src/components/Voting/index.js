@@ -19,10 +19,12 @@ import {
   TextVotoRegistrado,
   TextPercentInv,
   ButtonVolverVotar,
-  BackgroundBoton,
+  ImageGustar,
   ContainerMasInfo,
   ImageWiki,
 } from "./styled";
+import megusta from "../../images/megusta.png";
+import nomegusta from "../../images/nomegusta.png";
 
 function Voting() {
   const [percent, updatePercent] = useState(
@@ -144,13 +146,9 @@ function Voting() {
                 </TextTitleCard>
                 <ContainerLike>
                   {like ? (
-                    <BackgroundBoton back="#1cbbb4">
-                      <LikeOutlined />
-                    </BackgroundBoton>
+                    <ImageGustar src={megusta} alt="me gusta" />
                   ) : (
-                    <BackgroundBoton back="#ffad1d">
-                      <DislikeOutlined />
-                    </BackgroundBoton>
+                    <ImageGustar src={nomegusta} alt="no me gusta" />
                   )}
 
                   <TextVotoRegistrado>

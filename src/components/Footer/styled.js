@@ -8,6 +8,7 @@ export const ContainerLeft = styled.footer`
   margin-bottom: 20px;
   @media (max-width: 541px) {
     text-align: center;
+    justify-content: center;
   }
 `;
 export const ContainerRight = styled.footer`

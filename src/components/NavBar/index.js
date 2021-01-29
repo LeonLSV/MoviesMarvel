@@ -65,6 +65,7 @@ export const NavBar = () => {
                   fontSize: "20px",
                   marginLeft: "17px",
                   cursor: "pointer",
+                  marginTop: "3px",
                 }}
               />
             </Drawer>

@@ -168,19 +168,32 @@ export const ButtonVolverVotar = styled.button`
   border: 1px solid white;
   height: 50px;
   padding: 0 30px;
-  @media (min-width: 1441px<) {
-    margin-bottom: 67px;
+  @media (min-width: 1840px) {
+    margin-bottom: 16px;
+  }
+  @media (max-width: 1340px) {
+    margin-bottom: 47px;
   }
   @media (max-width: 1025px) {
-    margin-bottom: 25px;
+    margin-bottom: 0px;
   }
-  @media (max-width: 768px) {
-    margin-bottom: -9px;
+  @media (max-width: 769px) {
+    margin-top: 7px;
+    margin-bottom: -5px;
   }
   @media (max-width: 415px) {
-    margin-bottom: 9px;
+    margin-bottom: 21px;
   }
-  @media (max-width: 375px) {
-    margin-bottom: 5px;
+  @media (max-width: 376px) {
+    margin-bottom: 7px;
+  }
+`;
+
+export const ImageGustar = styled.img`
+  width: 100px;
+  height: 100px;
+  @media (max-width: 541px) {
+    width: 60px;
+    height: 60px;
   }
 `;
