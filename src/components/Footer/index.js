@@ -4,7 +4,11 @@ import { Row, Col } from "antd";
 export const Footer = () => {
   return (
     <>
-      <h1>Footer</h1>
+      <Row>
+        <Col>
+          <h1>Footer</h1>
+        </Col>
+      </Row>
     </>
   );
 };
